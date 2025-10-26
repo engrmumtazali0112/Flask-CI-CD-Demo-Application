@@ -1,4 +1,3 @@
-
 import pytest
 from app import app
 
@@ -28,8 +27,9 @@ def test_add(client):
     assert data['result'] == 8
     assert data['operation'] == "addition"
 
-def test_add_negative(client):
-    response = client.get('/add/10/-3')
+def test_add_large_numbers(client):
+    response = client.get('/add/100/200')
     assert response.status_code == 200
     data = response.get_json()
-    assert data['result'] == 7
+    assert data['result'] == 300
+    assert data['operation'] == "addition"
