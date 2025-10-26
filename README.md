@@ -358,17 +358,18 @@ Current test coverage: **100%** 🎯
 ## 🔄 CI/CD Pipeline
 
 ### Pipeline Architecture
+
 ```mermaid
 graph LR
-    A[📝 Push Code] --> B[🔔 GitHub Actions Trigger]
-    B --> C{🧪 Run Tests}
-    C -->|✅ Pass| D[🔨 Build]
-    C -->|❌ Fail| E[📧 Notify Developer]
-    D --> F[📦 Create Artifacts]
-    F --> G{🚀 Deploy}
-    G -->|master branch| H[🌐 Production]
-    G -->|other branch| I[⏸️ Skip Deploy]
-    H --> J[✅ Live Application]
+    A[Push Code] --> B[GitHub Actions Trigger]
+    B --> C{Run Tests}
+    C -->|Pass| D[Build]
+    C -->|Fail| E[Notify Developer]
+    D --> F[Create Artifacts]
+    F --> G{Deploy}
+    G -->|master branch| H[Production]
+    G -->|other branch| I[Skip Deploy]
+    H --> J[Live Application]
 ```
 
 ### GitHub Actions Workflow
@@ -383,44 +384,11 @@ graph LR
 
 ### Workflow Stages
 
-<table>
-<tr>
-<td width="33%">
-
-#### 🧪 Test Stage
-- ✅ Checkout code
-- ✅ Setup Python 3.10
-- ✅ Install dependencies
-- ✅ Run pytest suite
-- ✅ Verify all tests pass
-
-**Duration:** ~17s
-
-</td>
-<td width="33%">
-
-#### 🔨 Build Stage
-- ✅ Verify tests passed
-- ✅ Build application
-- ✅ Create artifacts
-- ✅ Prepare deployment
-
-**Duration:** ~4s
-
-</td>
-<td width="33%">
-
-#### 🚀 Deploy Stage
-- ✅ Download artifacts
-- ✅ Deploy to environment
-- ✅ Run smoke tests
-- ✅ Notify completion
-
-**Duration:** ~4s
-
-</td>
-</tr>
-</table>
+| Stage | Description | Duration |
+|-------|-------------|----------|
+| **🧪 Test Stage** | <ul><li>Checkout code</li><li>Setup Python 3.10</li><li>Install dependencies</li><li>Run pytest suite</li><li>Verify all tests pass</li></ul> | ~17s |
+| **🔨 Build Stage** | <ul><li>Verify tests passed</li><li>Build application</li><li>Create artifacts</li><li>Prepare deployment</li></ul> | ~4s |
+| **🚀 Deploy Stage** | <ul><li>Download artifacts</li><li>Deploy to environment</li><li>Run smoke tests</li><li>Notify completion</li></ul> | ~4s |
 
 ### Pipeline Status
 
