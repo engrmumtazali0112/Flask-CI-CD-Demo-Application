@@ -130,6 +130,7 @@ python app.py
 
 <div align="center">
   <img src="images/app-running.png" alt="Application Running" width="800"/>
+  
   <p><em>Flask application running successfully on localhost:5000</em></p>
 </div>
 
