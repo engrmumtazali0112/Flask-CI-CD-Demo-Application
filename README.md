@@ -100,6 +100,7 @@ cd Flask-CI-CD-Demo-Application
 
 <details>
 <summary><b>Windows</b></summary>
+
 ```bash
 python -m venv venv
 venv\Scripts\activate
@@ -109,6 +110,7 @@ venv\Scripts\activate
 
 <details>
 <summary><b>macOS/Linux</b></summary>
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -129,9 +131,11 @@ python app.py
 🎉 **Success!** Your application is now running at `http://localhost:5000`
 
 <div align="center">
-  <img src="images/app-running.png" alt="Application Running" width="800"/>
+
+![Application Running](https://github.com/user-attachments/assets/c0806b64-c9a7-464f-ab2d-2a92350f8a39)
   
-  <p><em>Flask application running successfully on localhost:5000</em></p>
+<p><em>Flask application running successfully on localhost:5000</em></p>
+
 </div>
 
 ## 📡 API Documentation
@@ -172,8 +176,11 @@ curl http://localhost:5000/
 **Response Screenshot:**
 
 <div align="center">
-  <img src="images/curl-home.png" alt="Home Endpoint Response" width="600"/>
-  <p><em>Home endpoint returning application status</em></p>
+
+![Home Endpoint Response](https://github.com/user-attachments/assets/44da5f84-6d8a-4b6b-a7b9-96e92ab8b130)
+
+<p><em>Home endpoint returning application status</em></p>
+
 </div>
 
 ---
@@ -197,8 +204,11 @@ curl http://localhost:5000/health
 **Response Screenshot:**
 
 <div align="center">
-  <img src="images/curl-health.png" alt="Health Check Response" width="600"/>
-  <p><em>Health check endpoint confirming service is healthy</em></p>
+
+![Health Check Response](https://github.com/user-attachments/assets/04e08dc8-f8fd-4a67-87c1-b141df33b769)
+
+<p><em>Health check endpoint confirming service is healthy</em></p>
+
 </div>
 
 ---
@@ -227,8 +237,11 @@ curl http://localhost:5000/add/10/20
 **Response Screenshot:**
 
 <div align="center">
-  <img src="images/curl-add.png" alt="Addition Endpoint Response" width="600"/>
-  <p><em>Addition endpoint computing 10 + 20 = 30</em></p>
+
+![Addition Endpoint Response](https://github.com/user-attachments/assets/44c2a30b-d85b-464d-9b0c-b6893c31f27d)
+
+<p><em>Addition endpoint computing 10 + 20 = 30</em></p>
+
 </div>
 
 ---
@@ -237,6 +250,7 @@ curl http://localhost:5000/add/10/20
 
 <details>
 <summary><b>Using cURL</b></summary>
+
 ```bash
 # Test home endpoint
 curl http://localhost:5000/
@@ -252,6 +266,7 @@ curl http://localhost:5000/add/15/25
 
 <details>
 <summary><b>Using PowerShell</b></summary>
+
 ```powershell
 # Test home endpoint
 Invoke-RestMethod -Uri http://localhost:5000/
@@ -267,6 +282,7 @@ Invoke-RestMethod -Uri http://localhost:5000/add/15/25
 
 <details>
 <summary><b>Using Python Requests</b></summary>
+
 ```python
 import requests
 
@@ -303,8 +319,11 @@ pytest tests/ -v
 ```
 
 <div align="center">
-  <img src="images/pytest-results.png" alt="Pytest Results" width="800"/>
-  <p><em>All 4 tests passing successfully with pytest</em></p>
+
+![Pytest Results](https://github.com/user-attachments/assets/16aa5260-0b55-4e7b-a6fb-cffe9033ce95)
+
+<p><em>All 4 tests passing successfully with pytest</em></p>
+
 </div>
 
 ### Test Results
@@ -355,8 +374,11 @@ graph LR
 ### GitHub Actions Workflow
 
 <div align="center">
-  <img src="images/github-actions.png" alt="GitHub Actions Success" width="900"/>
-  <p><em>CI/CD pipeline successfully completed - All jobs passed ✅</em></p>
+
+![GitHub Actions Success](https://github.com/user-attachments/assets/2b980ba1-143f-4ef7-887c-28602e1dfe09)
+
+<p><em>CI/CD pipeline successfully completed - All jobs passed ✅</em></p>
+
 </div>
 
 ### Workflow Stages
@@ -468,6 +490,7 @@ The application will be available at:
 
 <details>
 <summary><b>🔷 Deploy to Heroku</b></summary>
+
 ```bash
 # Install Heroku CLI
 # Login to Heroku
@@ -498,6 +521,7 @@ heroku open
 
 <details>
 <summary><b>🐳 Deploy with Docker</b></summary>
+
 ```bash
 # Build image
 docker build -t flask-cicd-demo .
@@ -513,6 +537,7 @@ docker-compose up
 
 <details>
 <summary><b>☁️ Deploy to AWS</b></summary>
+
 ```bash
 # Using AWS Elastic Beanstalk
 eb init -p python-3.10 flask-cicd-demo
@@ -663,13 +688,13 @@ We love contributions! Here's how you can help make this project even better:
 
 2. **📥 Clone your fork**
 ```bash
-   git clone https://github.com/YOUR_USERNAME/Flask-CI-CD-Demo-Application.git
-   cd Flask-CI-CD-Demo-Application
+git clone https://github.com/YOUR_USERNAME/Flask-CI-CD-Demo-Application.git
+cd Flask-CI-CD-Demo-Application
 ```
 
 3. **🌿 Create a branch**
 ```bash
-   git checkout -b feature/amazing-feature
+git checkout -b feature/amazing-feature
 ```
 
 4. **✏️ Make your changes**
@@ -680,18 +705,18 @@ We love contributions! Here's how you can help make this project even better:
 
 5. **🧪 Run tests**
 ```bash
-   pytest tests/ -v
+pytest tests/ -v
 ```
 
 6. **💾 Commit your changes**
 ```bash
-   git add .
-   git commit -m "feat: Add amazing feature"
+git add .
+git commit -m "feat: Add amazing feature"
 ```
 
 7. **📤 Push to your fork**
 ```bash
-   git push origin feature/amazing-feature
+git push origin feature/amazing-feature
 ```
 
 8. **🔀 Create a Pull Request**
@@ -731,6 +756,7 @@ We love contributions! Here's how you can help make this project even better:
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ```
 MIT License
 
@@ -760,9 +786,12 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 **Full Stack Developer | DevOps Enthusiast | Open Source Contributor**
 
 [![GitHub](https://img.shields.io/badge/GitHub-engrmumtazali0112-181717?style=for-the-badge&logo=github)](https://github.com/engrmumtazali0112)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/mumtaz-ali)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mumtazali12/)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:engrmumtazali01@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=netlify)](https://mumtazali.dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=vercel)](https://portfolio-4i9tc9pa8-engrmumtazali0112s-projects.vercel.app/project)
+[![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/its_maliyzi?igsh=MWR1Y2x1a2xpazBpOA==)
+[![Threads](https://img.shields.io/badge/Threads-Follow-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.com/@its_maliyzi)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/mali_yzi)
 
 </div>
 
