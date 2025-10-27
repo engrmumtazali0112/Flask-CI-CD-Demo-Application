@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask-cicd-demo
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=0
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - flask-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: flask-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - flask-network
+    restart: unless-stopped
+
+networks:
+  flask-network:
+    driver: bridge
+
+volumes:
+  flask-data:
