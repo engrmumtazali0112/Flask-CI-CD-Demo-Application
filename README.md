@@ -856,3 +856,4 @@ Special thanks to:
 
 </div>
 "# CI/CD Pipeline Active" 
+"# Docker CI/CD Pipeline configured" 
