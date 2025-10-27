@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 env:
-  DOCKER_IMAGE: mumtazkhan12/flask-cicd-demo
+  DOCKER_IMAGE: engrmumtazali0112/flask-cicd-demo
 
 jobs:
   test:
