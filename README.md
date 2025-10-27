@@ -442,12 +442,10 @@ graph LR
 ### Docker CI/CD Pipeline
 
 <div align="center">
-
-![Docker Pipeline Success](https://github.com/engrmumtazali0112/Flask-CI-CD-Demo-Application/actions/runs/18832247532/workflow)
-
-<p><em>Docker CI/CD pipeline - Build, Push, and Deploy ✅</em></p>
-
+    <img src="https://github.com/engrmumtazali0112/Flask-CI-CD-Demo-Application/blob/master/images/docker-cicd.JPG" alt="Docker CI/CD Image">
+    <p><em>Docker CI/CD pipeline - Build, Push, and Deploy ✅</em></p>
 </div>
+
 
 **Docker Pipeline Stages:**
 
