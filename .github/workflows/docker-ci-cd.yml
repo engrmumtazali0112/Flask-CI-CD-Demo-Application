@@ -73,9 +73,9 @@ jobs:
     
     - name: Image digest
       run: |
-        echo "✅ Docker image built successfully!"
-        echo "📦 Image: ${{ env.DOCKER_IMAGE }}"
-        echo "🎉 View at: https://hub.docker.com/r/${{ env.DOCKER_IMAGE }}"
+        echo "Docker image built successfully!"
+        echo "Image: ${{ env.DOCKER_IMAGE }}"
+        echo "View at: https://hub.docker.com/r/${{ env.DOCKER_IMAGE }}"
 
   deploy:
     name: Deployment Success
@@ -85,6 +85,6 @@ jobs:
     steps:
     - name: Notify deployment
       run: |
-        echo "✅ CI/CD Pipeline completed successfully!"
-        echo "🐳 Docker image is ready for deployment"
-        echo "📦 Image: ${{ env.DOCKER_IMAGE }}:latest"
+        echo "CI/CD Pipeline completed successfully!"
+        echo "Docker image is ready for deployment"
+        echo "Image: ${{ env.DOCKER_IMAGE }}:latest"
