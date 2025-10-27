@@ -64,6 +64,7 @@ jobs:
           type=raw,value=latest,enable={{is_default_branch}}
     
     - name: Build and push Docker image
+      id: docker_build
       uses: docker/build-push-action@v5
       with:
         context: .
@@ -73,9 +74,9 @@ jobs:
     
     - name: Image digest
       run: |
-        echo "Docker image built successfully!"
+        echo "Docker image built and pushed successfully"
         echo "Image: ${{ env.DOCKER_IMAGE }}"
-        echo "View at: https://hub.docker.com/r/${{ env.DOCKER_IMAGE }}"
+        echo "Digest: ${{ steps.docker_build.outputs.digest }}"
 
   deploy:
     name: Deployment Success
@@ -85,6 +86,6 @@ jobs:
     steps:
     - name: Notify deployment
       run: |
-        echo "CI/CD Pipeline completed successfully!"
-        echo "Docker image is ready for deployment"
-        echo "Image: ${{ env.DOCKER_IMAGE }}:latest"
+        echo "CI/CD Pipeline completed successfully"
+        echo "Docker image: ${{ env.DOCKER_IMAGE }}:latest"
+        echo "View at: https://hub.docker.com/r/${{ env.DOCKER_IMAGE }}"
