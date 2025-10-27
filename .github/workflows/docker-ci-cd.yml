@@ -82,8 +82,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Notify deployment
+    - name: Image digest
       run: |
-        echo "✅ Docker image built and pushed successfully!"
-        echo "🐳 Image: ${{ env.DOCKER_IMAGE }}:latest"
-        echo "📦 View at: https://hub.docker.com/r/${{ env.DOCKER_IMAGE }}"
+        echo "✅ Docker image built successfully!"
+        echo "📦 Image: ${{ env.DOCKER_IMAGE }}"
+        echo "🏷️ Tags: ${{ steps.meta.outputs.tags }}"
